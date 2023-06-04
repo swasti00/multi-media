@@ -1,0 +1,55 @@
+
+    <title>Domain Info</title>
+
+      <div class="container py-5">
+        <header style="color: rgb(3, 14, 51);" class="text-center">
+          <h1 style="font-family: 'Libre Baskerville', serif ;" class="display-4">
+              Domain Info
+          </h1>
+          <p style="font-family: 'Libre Baskerville', serif ;" class="lead mb-0"><strong>Check Domain Info</strong></p>
+          <img style="padding-top: 10px;" src="https://img.icons8.com/color/100/000000/whois--v1.png"  width="100" class="mb-4"/>
+     </header>
+     <div class="row py-4">
+      <div class="col-lg-6 mx-auto">
+        <form action="/domaininfo" method="post">
+          <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+            <label style="font-family: 'Tiro Kannada', serif; padding:10px 2px 0px 2px;" for="domain"><strong>www.</strong></label>
+            <input class="form-control" type="text" name="domain" id="" placeholder="Domain name" required>
+          </div>
+          <div class="form-group text-center">
+            <button class="w-90 btn btn-lg success">Check</button>
+        </form>
+      </div>
+    </div>
+        <%if (flag) { %>
+          <div style="border: 2px solid rgb(3, 23, 90); border-radius: 30px; padding: 10px; margin-top: 10px;"  class="container text-center">
+            <table class="table table-striped text-center">
+              <thead>
+                <tr>
+                  <th>Domain Name</th>
+                  <th>RegistrarWhoisServer</th>
+                  <th>RegistrarUrl</th>
+                  <th>Registrar</th>
+                  <th>Creation Date</th>
+                  <th>Domain Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><%=data.domainName%></td>
+                  <td><%=data.registrarWhoisServer%></td>
+                  <td><%=data.registrarUrl%></td>
+                  <td><%=data.registrar%></td>
+                  <td><%=date%></td>
+                  <td><%=domainAge%></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      <% } %>
+      
+          
+         
+     
+  </div>
+           

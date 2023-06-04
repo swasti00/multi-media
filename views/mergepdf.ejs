@@ -1,0 +1,33 @@
+
+    <title><%=title%></title>
+    
+    <div class="container py-5">
+
+      <header style="color: rgb(3, 14, 51);" class="text-center">
+          <h1 style="font-family: 'Libre Baskerville', serif ;" class="display-4">Pdf Upload</h1>
+          <p style="font-family: 'Libre Baskerville', serif ; padding-bottom: 30px;" class="lead mb-0"><strong>Merge 2 or more Pdf's.</strong></p>
+          
+          <img  src="https://img.icons8.com/external-flaticons-flat-flat-icons/100/000000/external-pdf-squaricons-flaticons-flat-flat-icons.png" width="70" class="mb-4"/>
+          <img style="margin-right: 20px; margin-left: 20px;" src="https://img.icons8.com/wired/64/000000/chevron-right.png" width="70" class="mb-4"/>
+          <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/100/000000/external-pdf-squaricons-flaticons-flat-flat-icons.png" width="70" class="mb-4"/>
+      </header>
+      <div class="row py-4">
+          <div class="col-lg-6 mx-auto">
+              <form action="/mergepdf" method="post" enctype="multipart/form-data">
+                <label for="files" style="padding-left: 40px;">Upload Single or Multiple PDF Files:</label>
+                <div style="padding-left: 30px;" class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                  <input type="file" accept=".pdf" multiple name="files" required onchange="readURL(this);" class="form-control border-0">
+                </div>
+                <div class="form-group text-center">
+                  <button class="w-90 btn btn-lg success">
+                    Merge 
+                  </button>
+                </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+
+
+
